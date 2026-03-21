@@ -14,6 +14,7 @@ Role: You are a Senior Web Designer creating the design system and sitemap for "
 
 **Tech stack:** {{TECH_STACK}}
 **Brand tone:** {{BRAND_TONE}}
+**Visual references:** {{REFERENCES}} (if empty, skip — use domain exploration only)
 
 ## Task
 
@@ -29,6 +30,8 @@ Before proposing any visual direction, produce these four outputs:
 2. **Color world:** 5+ colors derived from the product's physical environment, NOT generic palettes (e.g., agriculture → soil brown, canopy green, grain gold)
 3. **Signature element:** one unique visual/interaction idea that only THIS product would have
 4. **Defaults to reject:** three generic patterns you will NOT use (e.g., "no standard SaaS card grid", "no generic blue-600 accent")
+
+If `{{REFERENCES}}` provided (URLs or screenshots): fetch/analyze them first, extract visual direction (colors, layout patterns, typography mood, composition style), then blend with domain exploration. References guide direction but domain naming still applies.
 
 Present these to user before proceeding to design system.
 

@@ -41,6 +41,7 @@ Fill these placeholders before starting. Every `{{PLACEHOLDER}}` in reference pr
 | `{{BRAND_TONE}}` | Voice and personality | Professional, friendly, concise |
 | `{{PRIMARY_CTA}}` | Main conversion action | Sign up for free trial |
 | `{{DOCS_URL}}` | Framework docs | https://nextjs.org/docs |
+| `{{REFERENCES}}` | Visual references: URLs, screenshots, mood boards (optional) | https://stripe.com, https://linear.app |
 | `{{STRICT_MODE}}` | Gate enforcement | `true` (default) |
 
 <details>
