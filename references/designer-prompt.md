@@ -21,14 +21,29 @@ Create two documents: `DESIGN_SYSTEM.md` and `SITEMAP.md`. Also create the initi
 
 ---
 
+## Pre-Design: Domain Exploration (REQUIRED)
+
+Before proposing any visual direction, produce these four outputs:
+
+1. **Domain concepts:** 5+ words/ideas from the product's real-world context (e.g., finance → vault, ledger, ink, seal, margin)
+2. **Color world:** 5+ colors derived from the product's physical environment, NOT generic palettes (e.g., agriculture → soil brown, canopy green, grain gold)
+3. **Signature element:** one unique visual/interaction idea that only THIS product would have
+4. **Defaults to reject:** three generic patterns you will NOT use (e.g., "no standard SaaS card grid", "no generic blue-600 accent")
+
+Present these to user before proceeding to design system.
+
+---
+
 ## Part 1: DESIGN_SYSTEM.md
 
 ### 1.1 Color Palette
 
+Derive colors from the product's domain, not generic scales. Name tokens after the domain.
+
 Define with CSS custom properties:
-- `--color-primary` — main brand color + shades (50-900)
-- `--color-secondary` — accent color + shades
-- `--color-neutral` — grays for text, borders, backgrounds (50-900)
+- Domain-named tokens: `--vault-steel`, `--ledger-cream` — NOT `--cool-gray-400`, `--primary`
+- Provide shades (50-900) for primary and neutral
+- One accent color by default. Second accent only if product has established system
 - `--color-success`, `--color-warning`, `--color-error` — semantic
 - `--color-background` — page background
 - `--color-surface` — card/section background
@@ -60,11 +75,12 @@ Define each reusable component with:
 Required components:
 - Button (primary, secondary, ghost, icon)
 - Navigation (desktop + mobile hamburger)
-- Card (feature card, testimonial card, pricing card)
 - Section wrapper (consistent padding, background options)
 - Badge / Tag
 - Input fields (if forms exist)
 - Footer
+
+**Card policy:** Default to NO cards. Use sections, columns, dividers, lists, and media blocks instead. Cards only when the card IS the interaction (clickable, expandable, draggable). If a panel works without card treatment — remove it.
 
 ### 1.5 Responsive Breakpoints
 
@@ -76,10 +92,16 @@ Required components:
 
 ### 1.6 Animation & Motion
 
+Ship 2–3 intentional motions minimum:
+- One entrance sequence in hero
+- One scroll-linked or sticky effect
+- One hover/reveal/layout transition
+
+Framer Motion preferred when available. Rules:
+- Noticeable in a quick recording, smooth on mobile, fast and restrained
+- Consistent across the page, removed if ornamental only
 - Transition defaults: duration, easing
-- Scroll animations: fade-in, slide-up thresholds
-- Hover effects: scale, shadow, color
-- Reduced motion: respect `prefers-reduced-motion`
+- Respect `prefers-reduced-motion`
 
 ### 1.7 Iconography & Imagery
 
@@ -140,8 +162,29 @@ Provide three complete files:
 
 Update `PROGRESS.md`: set Phase 1 Design row to `🔄 In Progress` when starting, `✅ Done` when finished.
 
+## Hard Rules
+
+- No cards by default. Use sections, columns, dividers, media blocks instead.
+- No hero cards by default.
+- No boxed center-column hero when brief calls for full bleed.
+- One dominant idea per section max.
+- No headline should overpower brand on branded pages.
+- Two typefaces max without clear reason.
+- One accent color unless product has established system.
+- CSS variables must be domain-named, not generic.
+- First viewport is a poster, not a document.
+
+## Litmus Checks (verify before presenting)
+
+- Is brand/product unmistakable in first screen?
+- Is there one strong visual anchor?
+- Does each section have one job?
+- Are cards actually necessary?
+- **Swap test:** would replacing signature elements with defaults change the feel?
+- **Token test:** do CSS variables sound like THIS product?
+
 ## Constraint
 
 Output ONLY design system + sitemap. Do not write any implementation code.
 Colors must be in hex or HSL. Typography must reference real font names.
-Every design decision must be justified by the BRIEF's tone/audience requirements.
+Every design decision must be justified by the BRIEF's tone/audience requirements and domain exploration.
