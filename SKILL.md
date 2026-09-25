@@ -3,8 +3,7 @@ name: web-pipeline
 description: |
   Web site/landing page pipeline: research, content strategy, design system, frontend coding, SEO + accessibility review, QA.
   Includes: PROGRESS.md tracking, SITEMAP.md, DESIGN_SYSTEM.md, Lighthouse validation, responsive checks.
-  Use when: building a website, landing page, "design + code a site", user says "make a website",
-  "create landing page", "web pipeline", "build a site", "new website end-to-end".
+  Use when the user wants a new website or landing page designed and built end-to-end.
   Does NOT handle: full-stack apps with backend logic, databases, APIs — use phased-engineering-pipeline instead.
 ---
 
@@ -34,7 +33,7 @@ Fill these placeholders before starting. Every `{{PLACEHOLDER}}` in reference pr
 |---|---|---|
 | `{{SITE_NAME}}` | Website/project name | TechFlow Landing |
 | `{{SITE_PURPOSE}}` | Type of site | SaaS landing page |
-| `{{TECH_STACK}}` | Framework + tools | Next.js 14, Tailwind CSS, Framer Motion |
+| `{{TECH_STACK}}` | Framework + tools | Next.js, Tailwind CSS, Framer Motion |
 | `{{BUILD_COMMAND}}` | Build verification | `npm run build` |
 | `{{LINT_COMMAND}}` | Linter | `npm run lint` |
 | `{{TARGET_AUDIENCE}}` | Who visits the site | B2B SaaS founders, 25-45 |
@@ -47,9 +46,9 @@ Fill these placeholders before starting. Every `{{PLACEHOLDER}}` in reference pr
 <details>
 <summary>Stack profile examples</summary>
 
-**Next.js/Tailwind:** `TECH_STACK=Next.js 14, Tailwind CSS 4, Framer Motion` / `BUILD=npm run build` / `LINT=npm run lint`
+**Next.js/Tailwind:** `TECH_STACK=Next.js, Tailwind CSS, Framer Motion` (current stable versions) / `BUILD=npm run build` / `LINT=npm run lint`
 
-**Astro/CSS:** `TECH_STACK=Astro 4, vanilla CSS, View Transitions` / `BUILD=npm run build` / `LINT=npm run lint`
+**Astro/CSS:** `TECH_STACK=Astro, vanilla CSS, View Transitions` / `BUILD=npm run build` / `LINT=npm run lint`
 
 **HTML/CSS/JS:** `TECH_STACK=HTML5, CSS3, vanilla JavaScript` / `BUILD=N/A` / `LINT=npx htmlhint "**/*.html"`
 
@@ -200,7 +199,7 @@ Read full prompt: `references/designer-prompt.md`
 4. Spawn both reviewers IN PARALLEL
 5. Gate: both must return exact strings:
    - `APPROVE: SEO is optimized.`
-   - `APPROVE: Accessibility meets WCAG 2.1 AA.`
+   - `APPROVE: Accessibility meets WCAG 2.2 AA.`
 6. If either returns issues → fix → recommit → re-run BOTH
 7. Mark page complete. Move to next page.
 
@@ -233,7 +232,7 @@ Read full prompt: `references/qa-prompt.md`
 |---------|---------------|-------|
 | Brief approved | `[phase-0] brief: {site}` | `BRIEF.md` |
 | Design approved | `[phase-1] design: {site}` | `DESIGN_SYSTEM.md`, `SITEMAP.md` |
-| Page N passes review | `[phase-2.N] page: {page name}` | Page files |
+| Page N code written (before review) | `[phase-2.N] page: {page name}` | Page files |
 | Dev fix after review | `[phase-2.N] fix: {issue}` | Changed files |
 | QA passes | `[phase-3] QA passed` | Test/config files |
 

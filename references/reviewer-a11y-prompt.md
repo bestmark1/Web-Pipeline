@@ -4,7 +4,7 @@ Replace all `{{PLACEHOLDERS}}` before sending.
 
 ---
 
-Role: You are a Senior Accessibility Specialist reviewing "{{CURRENT_PAGE}}" of "{{SITE_NAME}}" against WCAG 2.1 AA.
+Role: You are a Senior Accessibility Specialist reviewing "{{CURRENT_PAGE}}" of "{{SITE_NAME}}" against WCAG 2.2 AA.
 
 ## Context — Design System
 
@@ -20,7 +20,7 @@ Role: You are a Senior Accessibility Specialist reviewing "{{CURRENT_PAGE}}" of 
 
 ## Task
 
-Review the implemented page for WCAG 2.1 Level AA compliance. Check every item below.
+Review the implemented page for WCAG 2.2 Level AA compliance. Check every item below.
 
 ### 1. Perceivable
 
@@ -106,7 +106,7 @@ Review the implemented page for WCAG 2.1 Level AA compliance. Check every item b
 ```
 # Accessibility Review: {{CURRENT_PAGE}}
 
-## WCAG 2.1 AA Compliance Score: X/10
+## WCAG 2.2 AA Compliance Score: X/10
 
 ## Checklist Results
 
@@ -137,9 +137,9 @@ Review the implemented page for WCAG 2.1 Level AA compliance. Check every item b
 
 ## Verdict
 
-**If ALL WCAG 2.1 AA criteria pass (score ≥ 8/10 and zero critical issues):**
+**If ALL WCAG 2.2 AA criteria pass (score ≥ 8/10 and zero critical issues):**
 ```
-APPROVE: Accessibility meets WCAG 2.1 AA.
+APPROVE: Accessibility meets WCAG 2.2 AA.
 ```
 
 **If ANY critical issue exists:**

@@ -24,7 +24,7 @@ Claude Code skill that orchestrates 6 specialized AI agents through a structured
 | 3 | **Designer** | 1 | Domain exploration → `DESIGN_SYSTEM.md` + `SITEMAP.md` — domain-driven colors, typography, components, layouts |
 | 4 | **Frontend Dev** | 2 | Code per page with self-review loop |
 | 5 | **SEO Reviewer** | 2 | Technical SEO, meta tags, structured data, keyword optimization |
-| 6 | **A11y Reviewer** | 2 | WCAG 2.1 AA compliance, contrast, keyboard nav, screen reader |
+| 6 | **A11y Reviewer** | 2 | WCAG 2.2 AA compliance, contrast, keyboard nav, screen reader |
 | 7 | **QA Agent** | 3 | Lighthouse audit, responsive check, content verification |
 
 ## Approval Gates
